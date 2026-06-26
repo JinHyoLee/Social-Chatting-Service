@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 0.1px solid rgb(221, 174, 174); */
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    margin: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    border: 3px solid rgb(60, 88, 141);
+}
+hr {
+    background-color: rgb(31, 169, 187);
+    height: 3px;
+    margin: 0 10px 0 10px;
+}
+.header {
+    display: none;
+}
+
+/* 로그인 */
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input::placeholder {
+    font-size: large;
+    text-align: center;
+}
+#login-form {
+    width: 300px;
+    border: 2px solid #306d9e;
+    padding: 20px;
+    border-radius: 20px;
+}
+#login-form > input,
+button {
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid #7f9fb9;
+}
+#login-form > button {
+    color: #fff;
+    font-size: large;
+    background-color: #306d9e;
+    cursor: pointer;
+}
+
+/* 헤더 */
+.nav > li {
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px;
+}
+.container {
+    height: 100vh;
+}
+
+/* Rooms_메인 */
+.room-container {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid rgb(60, 88, 141);
+    margin: 20px 30px 20px 30px;
+}
+.room-container > div {
+    padding: 10px;
+}
+.people {
+    width: 20%;
+    margin-left: 10px;
+}
+.room-number {
+    width: 40%;
+}
+.enter {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    /* margin: 2px; */
+}
+
+/* Rooms_상세 */
+.rooms-detail {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+.chat {
+    overflow-y: scroll;
+}
+.chat-room {
+    width: 70%;
+    padding: 20px 0 20px 20px;
+}
+.chatting-list li {
+    /* padding: 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; */
+    margin-top: 0.4rem;
+}
+.chat-member {
+    width: 30%;
+    padding: 20px;
+}
+.chatline {
+    margin: 0;
+}
+.chat,
+.member {
+    padding: 10px;
+    height: 80%;
+    border: 3px solid rgb(60, 88, 141);
+}
+.chat-input {
+    font-size: medium;
+}
+.chat-input,
+.exit {
+    padding: 0 20px;
+    width: 100%;
+    margin-top: 10px;
+    height: 20%;
+    border: 3px solid rgb(60, 88, 141);
+}
+.exit {
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Users_메인 */
+.user {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid rgb(60, 88, 141);
+    margin: 20px 30px 20px 30px;
+}
+.user > div {
+    padding: 10px;
+}
+.username {
+    width: 20%;
+    margin-left: 10px;
+}
+.signup-date {
+    width: 30%;
+}
+.friend-num {
+    width: 20%;
+    text-align: center;
+}
+.friend-requests {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Friends_메인 */
+.nav2 {
+    text-align: center;
+    padding: 20px;
+}
+.nav2 > span {
+    margin: 100px;
+    /* background-color: yellow; */
+    width: 100px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+#navline {
+    margin: 0 20px 0 20px;
+}
+.friend {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid rgb(60, 88, 141);
+    margin: 20px 30px 20px 30px;
+}
+.friend > div {
+    padding: 10px;
+}
+.accept {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.reject {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.friend-delete {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.direct-message {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #306d9e;
+    background-color: #3d8bca;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* DM_상세 */
+.DM {
+    height: 400px;
+    text-align: center;
+    margin: 20px 350px 20px 350px;
+}
+.DM-chat {
+    text-align: start;
+    padding: 20px;
+}
