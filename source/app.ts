@@ -26,11 +26,12 @@ const io = socketConnect(server);
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: 'database-1.cshr2p3ua4bg.ap-northeast-2.rds.amazonaws.com',
+    host: 'localhost',
     port: '3306',
-    user: 'admin',
-    password: 'lhj0811!',
+    user: 'root',
+    password: '1234',
     database: 'chat',
+    insecureAuth: true
 });
 
 app.use(bodyParser.json());
