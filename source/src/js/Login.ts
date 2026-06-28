@@ -31,7 +31,10 @@ export function loginInit() {
                 if (data.result === 'OK') {
                     alert('로그인 성공');
                     // roomEnter();
-                    header.style.display = 'block';
+                    // header.style.display = 'block';
+                    // 로그인 시 JS에서 header.style.display = 'block' 대신 **'flex'**로 바꿔야 flex 레이아웃이 적용됩니다.
+                    header.style.display = 'flex';
+                    document.querySelector('.loginId')!.textContent = id.value;
                     main.innerHTML = '';
                 } else if (data.result === 'None') {
                     alert('아이디를 입력하세요');

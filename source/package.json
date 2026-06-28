@@ -5,9 +5,11 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npx webpack",
-        "start": "node ./dist/app.js",
-        "dev": "nodemon --watch src --exec npx ts-node app.ts"
+        "copy": "cp -r src/pages dist/pages && cp -r src/css dist/css",
+        "build": "webpack --mode production && npm run copy",
+        "front": "webpack --watch --mode development",
+        "back": "nodemon --watch app.ts --exec npx ts-node app.ts",
+        "start": "node ./dist/app.js"
     },
     "keywords": [],
     "author": "",

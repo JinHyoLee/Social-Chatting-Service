@@ -35,6 +35,8 @@ const db = mysql.createConnection({
 });
 
 app.use(bodyParser.json());
+app.use('/pages', express.static(path.join(__dirname, 'src/pages')));
+app.use('/css', express.static(path.join(__dirname, 'src/css')));   
 app.use(express.static(path.join(__dirname, 'dist')));
 const PORT = process.env.PORT || 5000;
 

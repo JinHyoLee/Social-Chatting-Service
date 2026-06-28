@@ -1,8 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-    mode: 'production',
+module.exports = (env, argv) => ({
+    mode: argv.mode || 'production',
     entry: './src/main.ts',
     module: {
         rules: [
@@ -22,4 +22,5 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })],
-};
+});
+

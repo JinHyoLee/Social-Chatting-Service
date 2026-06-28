@@ -18,9 +18,9 @@ hr {
     height: 3px;
     margin: 0 10px 0 10px;
 }
-.header {
+/* .header {
     display: none;
-}
+} */
 
 /* 로그인 */
 .login-wrapper {
@@ -59,16 +59,33 @@ button {
 }
 
 /* 헤더 */
+.header {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 25px 0;
+    font-size: 25px;
+}
+.loginId {
+    font-weight: bold;
+}
+
 .nav > li {
     margin: 5px;
-    font-size: 25px;
+    /* font-size: 25px; */
     font-weight: bold;
     cursor: pointer;
 }
 .nav {
     display: flex;
-    justify-content: flex-end;
-    margin: 25px;
+    /* justify-content: flex-end;
+    margin: 25px; */
+    margin: 0;
+}
+.header hr {
+    flex-basis: 100%;
+    margin-top: 15px;
 }
 .container {
     height: 100vh;
