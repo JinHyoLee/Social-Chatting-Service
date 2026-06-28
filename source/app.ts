@@ -289,10 +289,10 @@ app.get('/api/friends/:userId', (req: { params: { userId: any } }, res: { json: 
 });
 
 // 친구 삭제
-app.get('/api/deleteFriends/:userId/:friendId', (req: { params: { userId: any; friendId: any } }, res: { send: (arg0: { result: string }) => void }) => {
+app.get('/api/deletefriends/:userId/:friendId', (req: { params: { userId: any; friendId: any } }, res: { send: (arg0: { result: string }) => void }) => {
     const userId = req.params.userId;
     const delFriendId = req.params.friendId;
-    // console.log(userId, delFriendId);
+    console.log(userId, delFriendId);
 
     // 친구 목록에서 삭제 sql
     const delFriend = 'DELETE from friendtable WHERE username = ? and friendname = ?;';

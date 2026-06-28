@@ -1,5 +1,5 @@
 import { roomEnter } from './js/Rooms';
-import { friendsInit } from './js/Freinds';
+import { friendsInit } from './js/Friends';
 import { loginInit, signUpInit } from './js/Login';
 import { usersInit } from './js/Users';
 
