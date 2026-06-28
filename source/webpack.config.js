@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, argv) => ({
     mode: argv.mode || 'production',
+    devtool: argv.mode === 'development' ? 'source-map' : false,
     entry: './src/main.ts',
     module: {
         rules: [

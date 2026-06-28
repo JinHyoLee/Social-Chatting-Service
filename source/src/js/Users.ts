@@ -1,6 +1,7 @@
 import { getLoginId } from './Login';
 
 async function getDataFromServer() {
+    console.log('getDataFromServer');
     const userId = getLoginId();
     const url = `/api/users/${userId}`;
     const data = await fetch(url);
