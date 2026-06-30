@@ -82,14 +82,7 @@ app.ts → Express가 dist/ + src/pages + src/css 서빙
 
 ## 실행 방법
 
-### 1. MySQL 설치 및 실행 (macOS Homebrew 예)
-
-```bash
-brew install mysql
-brew services start mysql
-brew services list   # mysql → started 확인
-```
-
+### 1. MySQL 설치 및 실행
 ### 2. DB · 계정 · 테이블 생성
 
 root로 MySQL 접속 후:
