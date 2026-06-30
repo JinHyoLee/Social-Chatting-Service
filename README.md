@@ -154,9 +154,9 @@ npm run back
 npm run front
 ```
 
-브라우저: **http://localhost:5001**
+브라우저: **http://localhost:5000**
 
-포트 충돌 시: `PORT=5002 npm run back`
+포트 충돌 시: `PORT=5001 npm run back`
 
 ---
 
