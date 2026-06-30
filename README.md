@@ -287,3 +287,26 @@ npm run front
 | `chatting`       | 입·퇴장 알림 및 채팅 메시지를 채팅 목록에 표시 |
 | `refresh-member` | 참여 인원 목록 UI 갱신                         |
 
+## 시연영상
+#### 로그인, 회원가입, 로그아웃
+https://github.com/user-attachments/assets/793ab4c3-0298-4835-81c7-095fe2b290d0
+
+#### 채팅방 입장, 퇴장, 실시간 채팅
+https://github.com/user-attachments/assets/2afe3399-92e2-4b3b-8ee4-f1d2029628ed
+
+#### 친구 추가 및 삭제
+https://github.com/user-attachments/assets/9a82558f-65e4-4cbd-b889-d0f6c8e06827
+
+
+
+
+
+
+
+
+
+
+
+
+
+
