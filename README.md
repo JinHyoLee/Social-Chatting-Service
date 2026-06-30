@@ -58,10 +58,6 @@ app.ts → Express가 dist/ + src/pages + src/css 서빙
 | Friends | `pages/Friends.html` | `friendsInit`             |
 | Logout  | `pages/login.html`   | `init`                    |
 
-Friends 내부 서브 nav: `inbox` → `pages/inbox.html`, friends → `pages/Friends_list.html`
-
-로그인 ID는 `Login.ts`의 `loginId` 변수에만 저장됩니다 (서버 세션 없음).
-
 ### 명령어
 
 | 명령            | 설명                                                            |
