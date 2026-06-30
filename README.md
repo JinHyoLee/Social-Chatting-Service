@@ -25,7 +25,6 @@ app.ts → Express가 dist/ + src/pages + src/css 서빙
 ### 폴더 구조
 
 ```
-chatting/
 ├── app.ts                 # Express API · Socket.IO · MySQL
 ├── package.json           # npm scripts · 의존성
 ├── tsconfig.json          # TypeScript 설정 (프론트·백 공용)
