@@ -159,7 +159,7 @@ socket.on('chatting', (data) => {
 });
 
 // 채팅방 내 유저목록
-socket.on('newmember-join', (id, roomData) => {
+socket.on('refresh-member', (id, roomData) => {
     makeCurrentMember(id, roomData);
 });
 

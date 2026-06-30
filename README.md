@@ -297,7 +297,7 @@ npm run front
 | 리스너           | 설명                                           |
 | :--------------- | :--------------------------------------------- |
 | `chatting`       | 입·퇴장 알림 및 채팅 메시지를 채팅 목록에 표시 |
-| `newmember-join` | 참여 인원 목록 UI 갱신                         |
+| `refresh-member` | 참여 인원 목록 UI 갱신                         |
 
 ### 브로드캐스트
 
@@ -319,8 +319,8 @@ npm run front
 |  #  | 이벤트               | 인자               | 서버 API (`app.ts`)                                      | 수신 대상          | 클라이언트 동작          |
 | :-: | :------------------- | :----------------- | :------------------------------------------------------- | :----------------- | :----------------------- |
 |  1  | 입·퇴장 알림         | `{ name, msg }`    | `socket.to(room).emit('chatting', { name: id, msg })`    | 같은 방, 본인 제외 | 채팅 목록에 입·퇴장 표시 |
-|  2  | 참여 인원 갱신(입장) | `room`, `roomData` | `io.in(room).emit('newmember-join', room, roomData)`     | 같은 방, 본인 포함 | 참여 인원 목록 갱신      |
-|  3  | 참여 인원 갱신(퇴장) | `room`, `roomData` | `socket.to(room).emit('newmember-join', room, roomData)` | 같은 방, 본인 제외 | 참여 인원 목록 갱신      |
+|  2  | 참여 인원 갱신(입장) | `room`, `roomData` | `io.in(room).emit('refresh-member', room, roomData)`     | 같은 방, 본인 포함 | 참여 인원 목록 갱신      |
+|  3  | 참여 인원 갱신(퇴장) | `room`, `roomData` | `socket.to(room).emit('refresh-member', room, roomData)` | 같은 방, 본인 제외 | 참여 인원 목록 갱신      |
 |  4  | 채팅 수신            | `{ name, msg }`    | `socket.to(room).emit('chatting', data)`                 | 같은 방, 본인 제외 | 채팅 목록에 메시지 추가  |
 
 ### 메시지 payload 예

@@ -327,6 +327,7 @@ io.on('connection', (socket: any) => {
 
     // 방 입장
     socket.on('join-room', (id: string, room: string) => {
+        socket.data.userId = id; // socket 객체에 userId 추가
         roomData[Number(room) - 1].members.push(id);
         // console.log(`${id} join room ${room}`);
         socket.join(room);
@@ -334,17 +335,20 @@ io.on('connection', (socket: any) => {
             name: id,
             msg: '님이 입장',
         });
-
-        socket.to(room).emit('newmember-join', room, roomData);
+        io.in(room).emit('refresh-member', room, roomData);
+        // socket.to(room).emit('refresh-member', room, roomData);
     });
 
+    // listener for 'disconnecting' event
     socket.on('disconnecting', () => {
-        socket.rooms.forEach((room: any) =>
-            socket.to(room).emit({
-                name: 'unknown',
-                msg: '님의 연결이 해제되었습니다.',
-            })
-        );
+        console.log('socket.on: disconnecting: id:', socket.data.userId);
+        const id = socket.data.userId ?? 'unknown';
+        for (const room of socket.rooms) {
+            if (room === socket.id) continue; // Socket.IO 기본 room(소켓 id)은 채팅방이 아니므로 스킵
+            roomData[Number(room) - 1].members = roomData[Number(room) - 1].members.filter((m) => m !== id);
+            socket.to(room).emit('chatting', { name: id, msg: '님의 연결이 해제되었습니다.' });
+            socket.to(room).emit('refresh-member', room, roomData);
+        }
     });
 
     // 방 퇴장
@@ -357,7 +361,7 @@ io.on('connection', (socket: any) => {
             msg: '님이 퇴장',
         });
 
-        socket.to(room).emit('newmember-join', room, roomData);
+        socket.to(room).emit('refresh-member', room, roomData);
 
         socket.leave(room);
     });

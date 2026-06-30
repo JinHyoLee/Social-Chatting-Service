@@ -1,7 +1,7 @@
-import { roomEnter } from './js/Rooms';
-import { friendsInit } from './js/Friends';
-import { loginInit, signUpInit } from './js/Login';
-import { usersInit } from './js/Users';
+import { roomEnter } from './script/Rooms';
+import { friendsInit } from './script/Friends';
+import { loginInit, signUpInit } from './script/Login';
+import { usersInit } from './script/Users';
 
 const nav = document.querySelector('.nav');
 const main = document.querySelector('.main');
